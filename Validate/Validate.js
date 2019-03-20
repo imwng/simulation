@@ -14,11 +14,15 @@ class Validate {
    * @param {String} scene 验证场景
    * @return {Boolean}
    */
-  function check (data, rules = [], scene = '') {
+  check (data, rules = [], scene = '') {
     this.error = [];
     
     if (rules.length === 0) {
       rules = this.rule;
     }
+    
+    this.getScene(scene);
+    
+    // ...
   }
 }
